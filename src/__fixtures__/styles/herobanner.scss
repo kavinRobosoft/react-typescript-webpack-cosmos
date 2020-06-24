@@ -1,0 +1,69 @@
+
+
+$btn-init-bg-color: white;
+$btn-hover-bg-color: #1c6693;
+
+.hero-banner{
+    position: relative;
+    width: 100%;
+    height: auto;
+    top:0;
+    left: 0;
+}
+
+.hero-overlay{
+   position: absolute;
+   width: 40%;
+   top: 6.5em;
+   left: 4em;
+   display: grid;
+   
+   grid-gap:1em;
+   letter-spacing: .1em;
+   line-height: 1.4em;
+   @media only screen and (max-width: 900px) {
+       display: none;
+   }
+   
+
+}
+.overlayTxt{
+   
+       font-size: 1em;
+       color: #b9babb;
+   
+}
+.hero-banner-btn{
+   padding: 1em;
+   border-radius: .1em;
+   background-color: $btn-init-bg-color;
+   color: #15171c;
+   font-weight: bold;
+   border: none;
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &:hover{
+       background-color: $btn-hover-bg-color;
+       color:$btn-init-bg-color;
+       div{
+           border-left: 1em solid $btn-init-bg-color;
+       }
+     }  
+   div{
+       width: 0; 
+       height: 0; 
+       border-top: .7em solid transparent;
+       border-bottom: .7em solid transparent;
+
+       border-left: 1em solid #15171c;
+       margin-right: .5em;
+   }
+}
+.overlayButtonDiv{
+   display:flex;
+}

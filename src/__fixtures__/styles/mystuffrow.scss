@@ -1,0 +1,30 @@
+.mystuff-banner{
+    position: relative;
+    width: 100vw;
+    max-width:100%;
+    margin-left: 3em;
+}
+.mystuff-banner .wrapper{
+    display: grid; 
+    margin-top: 1em;
+    grid-gap:1em;
+    grid-template-columns: repeat(auto-fill, minmax(8.7em, 8.7em));
+}
+
+.mystuff-banner .smallBanner{
+    background-color: #b9babb;
+    border: .1em #15171c solid;
+    padding: 1em;
+    width: 6.6em;
+    height: 10em;
+}
+
+.mystuff-banner .bigBanner{
+    background-color: #b9babb;
+    border: .1em #15171c solid;
+    margin-left: -2em;
+    padding: 1em;
+    width: 11em;
+    height: 15em;
+    z-index: 1000;
+}

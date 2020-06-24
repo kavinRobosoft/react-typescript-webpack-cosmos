@@ -1,0 +1,38 @@
+.continueWatch-banner{
+    position: relative;
+    top:-4em;
+    width: 100vw;
+    max-width:100%;
+    margin-left: 3em;
+
+    @media only screen and (max-width: 400px) {
+        margin-left: 0em;
+
+    }
+
+}
+
+.continueWatch-banner .wrapper{
+    display: grid;
+    grid-gap: 1em;
+    margin-top: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(14.5em, 14.5em));
+    
+}
+
+.continueWatch-banner img{
+    width: 14.5em;
+
+    @media only screen and (max-width: 400px) {
+        width: 85vw;
+        text-align: center;
+    }
+}
+
+.continueWatch-banner .detail{
+    position: relative;
+    top: -4em;
+    font-size: .7em;
+    background-color: #15171c;
+    padding-top: .6em;
+}

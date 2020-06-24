@@ -1,0 +1,35 @@
+@mixin navtext {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(4em, 4em));
+    grid-gap: 1em;
+    text-align: left;
+    div{ 
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 1em;     
+        cursor: pointer; 
+        text-align: left;
+    } 
+}
+
+.header{
+    display: flex;
+    margin: 2em 4em;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    .header-logo{
+        width: 7em;
+        height: 1.5em;
+        margin-right: 2em;
+    }
+    .header-navbar{
+        @include navtext;
+        font-size: .9em;
+
+        img{
+            width: 2em;
+        }
+    }
+}
