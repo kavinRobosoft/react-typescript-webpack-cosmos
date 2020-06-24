@@ -1,0 +1,186 @@
+$bgColor : #15171c;
+$textColor: #eeeeee;
+$font: Arial, Helvetica, sans-serif;
+
+$btn-init-bg-color: white;
+$btn-hover-bg-color: #1c6693;
+
+*{
+    color: $textColor;
+    font-family: $font;
+}
+
+@mixin navtext {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(4em, 4em));
+    grid-gap: 1em;
+    text-align: left;
+    div{ 
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 1em;     
+        cursor: pointer; 
+        text-align: left;
+    } 
+}
+
+body{
+    background-color: $bgColor;
+    overflow-x:hidden;
+}
+
+.header{
+    display: flex;
+    margin: 2em 4em;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    .header-logo{
+        width: 7em;
+        height: 1.5em;
+        margin-right: 2em;
+    }
+    .header-navbar{
+        @include navtext;
+        font-size: .9em;
+
+        img{
+            width: 2em;
+        }
+    }
+}
+
+.hero-banner{
+     position: relative;
+     width: 100%;
+     height: auto;
+     top:0;
+     left: 0;
+}
+
+.hero-overlay{
+    position: absolute;
+    width: 40%;
+    top: 6.5em;
+    left: 4em;
+    display: grid;
+    
+    grid-gap:1em;
+    letter-spacing: .1em;
+    line-height: 1.4em;
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
+    
+
+}
+.overlayTxt{
+    
+        font-size: 1em;
+        color: #b9babb;
+    
+}
+.hero-banner-btn{
+    padding: 1em;
+    border-radius: .1em;
+    background-color: $btn-init-bg-color;
+    color: #15171c;
+    font-weight: bold;
+    border: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        background-color: $btn-hover-bg-color;
+        color:$btn-init-bg-color;
+        div{
+            border-left: 1em solid $btn-init-bg-color;
+        }
+      }  
+    div{
+        width: 0; 
+        height: 0; 
+        border-top: .7em solid transparent;
+        border-bottom: .7em solid transparent;
+
+        border-left: 1em solid #15171c;
+        margin-right: .5em;
+    }
+}
+.overlayButtonDiv{
+    display:flex;
+}
+
+.continueWatch-banner{
+    position: relative;
+    top:-4em;
+    width: 100vw;
+    max-width:100%;
+    margin-left: 3em;
+
+    @media only screen and (max-width: 400px) {
+        margin-left: 0em;
+
+    }
+
+}
+.continueWatch-banner .wrapper{
+    display: grid;
+    grid-gap: 1em;
+    margin-top: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(14.5em, 14.5em));
+    
+}
+
+.continueWatch-banner img{
+    width: 14.5em;
+
+    @media only screen and (max-width: 400px) {
+        width: 85vw;
+        text-align: center;
+    }
+}
+
+.continueWatch-banner .detail{
+    position: relative;
+    top: -4em;
+    font-size: .7em;
+    background-color: #15171c;
+    padding-top: .6em;
+}
+
+.mystuff-banner{
+    position: relative;
+    width: 100vw;
+    max-width:100%;
+    margin-left: 3em;
+}
+.mystuff-banner .wrapper{
+    display: grid; 
+    margin-top: 1em;
+    grid-gap:1em;
+    grid-template-columns: repeat(auto-fill, minmax(8.7em, 8.7em));
+}
+
+.mystuff-banner .smallBanner{
+    background-color: #b9babb;
+    border: .1em #15171c solid;
+    padding: 1em;
+    width: 6.6em;
+    height: 10em;
+}
+
+.mystuff-banner .bigBanner{
+    background-color: #b9babb;
+    border: .1em #15171c solid;
+    margin-left: -2em;
+    padding: 1em;
+    width: 11em;
+    height: 15em;
+    z-index: 1000;
+}
